@@ -1,0 +1,29 @@
+{
+  "name": "lankaqr",
+  "version": "0.0.1",
+  "description": "LankaQR (CBSL V1.3, EMVCo MPM v1.1) encoder, decoder, and validator for TypeScript and JavaScript. Name reservation — full implementation arrives in v1.0.0.",
+  "main": "./index.js",
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "lankaqr",
+    "qr",
+    "payments",
+    "sri-lanka",
+    "emvco",
+    "mpm"
+  ],
+  "author": "Lakshitha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakshitha0526/lankaqr.git"
+  },
+  "homepage": "https://github.com/lakshitha0526/lankaqr#readme",
+  "bugs": {
+    "url": "https://github.com/lakshitha0526/lankaqr/issues"
+  }
+}
