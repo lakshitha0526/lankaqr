@@ -1,2 +1,1 @@
-// Public API will be populated in subsequent build steps.
-export {};
+export { computeCRC, verifyCRC } from "./crc";
