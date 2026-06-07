@@ -2,12 +2,36 @@
   "name": "lankaqr",
   "version": "0.0.1",
   "description": "LankaQR (CBSL V1.3, EMVCo MPM v1.1) encoder, decoder, and validator for TypeScript and JavaScript. Name reservation — full implementation arrives in v1.0.0.",
-  "main": "./index.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
-    "index.js",
+    "dist",
     "README.md",
     "LICENSE"
   ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
   "keywords": [
     "lankaqr",
     "qr",
@@ -25,5 +49,12 @@
   "homepage": "https://github.com/lakshitha0526/lankaqr#readme",
   "bugs": {
     "url": "https://github.com/lakshitha0526/lankaqr/issues"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.16",
+    "@vitest/coverage-v8": "^4.1.8",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
   }
 }
