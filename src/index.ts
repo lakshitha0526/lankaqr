@@ -17,3 +17,4 @@ export type {
   MerchantParseResult,
   TipIndicator,
 } from "./types";
+export { isValid } from "./validate";
