@@ -35,7 +35,7 @@ export type LankaQRData = {
   payloadFormatIndicator: "01";
   pointOfInitiation: "static" | "dynamic";
   merchantAccount: { raw: string; parsed: LankaPayMerchant | null };
-  merchantAccountTag: "26" | "27";
+  merchantAccountTag: "26" | "27" | null;
   merchantCategoryCode: string;
   countryCode: string;
   transactionCurrency: string;
@@ -73,7 +73,19 @@ export type EncodeResult =
   | { ok: true; payload: string }
   | { ok: false; reason: EncodeFailureReason };
 
-export type DecodeResult = { ok: true; data: LankaQRData } | { ok: false; reason: string };
+export type DecodeFailureReason =
+  | "empty payload"
+  | "tlv parse failed"
+  | "invalid crc"
+  | "crc tag must be last"
+  | "missing payload format indicator"
+  | "invalid point of initiation"
+  | "duplicate tag"
+  | "missing merchant account";
+
+export type DecodeResult =
+  | { ok: true; data: LankaQRData }
+  | { ok: false; reason: DecodeFailureReason };
 
 export type MerchantParseResult =
   | { ok: true; merchant: LankaPayMerchant }
