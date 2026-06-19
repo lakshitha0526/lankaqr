@@ -51,7 +51,27 @@ export type LankaQRData = {
   reservedFields: Record<string, string>;
 };
 
-export type EncodeResult = { ok: true; payload: string } | { ok: false; reason: string };
+export type EncodeFailureReason =
+  | "merchant account invalid"
+  | "invalid mcc"
+  | "merchant name required"
+  | "merchant name too long"
+  | "merchant city required"
+  | "merchant city too long"
+  | "reference label required"
+  | "reference label too long"
+  | "transaction amount too long"
+  | "invalid tip indicator"
+  | "tip amount required"
+  | "tip percentage required"
+  | "postal code too long"
+  | "alternate language code invalid"
+  | "alternate merchant name too long"
+  | "alternate merchant city too long";
+
+export type EncodeResult =
+  | { ok: true; payload: string }
+  | { ok: false; reason: EncodeFailureReason };
 
 export type DecodeResult = { ok: true; data: LankaQRData } | { ok: false; reason: string };
 
