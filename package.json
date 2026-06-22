@@ -1,6 +1,6 @@
 {
   "name": "lankaqr",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "LankaQR (CBSL V1.3, EMVCo MPM v1.1) encoder, decoder, and validator for TypeScript and JavaScript. Name reservation — full implementation arrives in v1.0.0.",
   "type": "module",
   "main": "./dist/index.cjs",
