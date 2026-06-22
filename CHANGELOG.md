@@ -4,7 +4,7 @@ All notable changes to this project are documented in this file. The format is
 based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.1] - 2026-06-22
 
 ### Added
 
@@ -29,5 +29,5 @@ First stable release.
 - `MCC` constants for the four CBSL-mandated category codes (fuel, government, religious, P2P).
 - Dual ESM + CJS + type-declaration build, zero runtime dependencies.
 
-[Unreleased]: https://github.com/lakshitha0526/lankaqr/compare/v1.0.0...HEAD
+[1.0.1]: https://github.com/lakshitha0526/lankaqr/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/lakshitha0526/lankaqr/releases/tag/v1.0.0
