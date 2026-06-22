@@ -87,6 +87,8 @@ export type DecodeResult =
   | { ok: true; data: LankaQRData }
   | { ok: false; reason: DecodeFailureReason };
 
+export type MerchantParseFailureReason = "merchant account block must be 28 characters";
+
 export type MerchantParseResult =
   | { ok: true; merchant: LankaPayMerchant }
-  | { ok: false; reason: string };
+  | { ok: false; reason: MerchantParseFailureReason };

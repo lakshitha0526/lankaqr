@@ -14,6 +14,7 @@ export type {
   LankaPayMerchant,
   LankaQRData,
   LankaQRInput,
+  MerchantParseFailureReason,
   MerchantParseResult,
   TipIndicator,
 } from "./types";
