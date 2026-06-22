@@ -12,7 +12,7 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- CI and release workflows pin `actions/setup-node@v5`, clearing the GitHub Actions Node 20 runtime deprecation notice.
+- CI and release workflows pin `actions/setup-node@v5` and `actions/upload-artifact@v7`, clearing the GitHub Actions Node 20 runtime deprecation notice.
 
 ## [1.0.0] - 2026-06-22
 
